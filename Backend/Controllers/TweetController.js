@@ -21,7 +21,7 @@ module.exports = {
     });
     res.send({
       success: true,
-      message: "Tweet Successfull!",
+      message: "Tweet Successful!",
     });
   },
   getTweet: async (req, res) => {
@@ -48,7 +48,7 @@ module.exports = {
   },
   deleteTweet: async (req, res) => {
     let tweetid = req.params.tweetid;
-    await TweetModel.remove({ _id: tweetid }, function (err) {
+    TweetModel.remove({ _id: tweetid }, function (err) {
       if (err) {
         // Some other error while deleting
         return res.status(400).send({ success: false, message: err });
