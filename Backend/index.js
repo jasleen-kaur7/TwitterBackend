@@ -16,6 +16,6 @@ console.log({tweet})
 app.use("/user", user);
 app.use("/tweet", tweet);
 
-app.listen(PORT, function () {
-  console.log(`App listening at http://localhost:${PORT}`);
+app.listen(process.env.PORT || 5000, function () {
+  console.log(`App listening at http://localhost:${process.env.PORT || 5000}`);
 });
