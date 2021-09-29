@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 mongoose
-  .connect(process.env.mongoURI + "twitter?retryWrites=true&w=majority", {
+  .connect(process.env.MONGOURI + "twitter?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
